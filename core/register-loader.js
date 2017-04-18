@@ -394,7 +394,7 @@ function instantiateDeps (loader, load, link, registry, state, seen) {
         }
       }
     }
-  })))
+  }))
   .then(function () {
     // now deeply instantiateDeps on each dependencyInstantiation that is a load record
     var deepDepsInstantiatePromises = [];
@@ -435,7 +435,7 @@ function instantiateDeps (loader, load, link, registry, state, seen) {
     link.error = link.error || err;
 
     throw err;
-  });
+  }));
 }
 
 // clears an errored load and all its errored dependencies from the loads registry
